@@ -1,10 +1,10 @@
-﻿namespace EcoFiap.Repository.Context
-{
-    using Fiap.Web.AspNet.Models;
-    using Fiap.Web.AspNet.Repository.Context;
+﻿using EcoFiap.Models;
+using EcoFiap.Repository.Context;
 
-    namespace Fiap.Web.AspNet.Repository
-    {
+namespace EcoFiap.Repository
+{
+    
+
         public class UsuarioRepository
         {
 
@@ -66,5 +66,5 @@
 
 
         }
-    }
+    
 }

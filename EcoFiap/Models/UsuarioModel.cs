@@ -6,6 +6,10 @@ namespace EcoFiap.Models
     [Table("USUARIO")]
     public class UsuarioModel
     {
+        public UsuarioModel(int id, string v)
+        {
+        }
+
         [Key]
         [Column("USUARIOID")]
         public int UsuarioId { get; set; } //sulfixo Id exclui a NECESSIDADE da notação key porem uso pra ostentar
