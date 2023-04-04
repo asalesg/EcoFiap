@@ -55,7 +55,7 @@ namespace EcoFiap.Repository
 
             public void Excluir(int id)
             {
-                var Usuario = new UsuarioModel(id, "");
+                var Usuario = new UsuarioModel();
 
                 dataBaseContext.Usuario.Remove(Usuario);
 

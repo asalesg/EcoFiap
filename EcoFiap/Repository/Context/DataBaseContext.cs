@@ -17,5 +17,6 @@ namespace EcoFiap.Repository.Context
         protected DataBaseContext()
         {
         }
+        public DbSet<EcoFiap.Models.ColetorModel>? ColetorModel { get; set; }
     }
 }

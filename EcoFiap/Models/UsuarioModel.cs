@@ -6,9 +6,6 @@ namespace EcoFiap.Models
     [Table("USUARIO")]
     public class UsuarioModel
     {
-        public UsuarioModel(int id, string v)
-        {
-        }
 
         [Key]
         [Column("USUARIOID")]
@@ -31,7 +28,7 @@ namespace EcoFiap.Models
         [Required(ErrorMessage = "Telefone é obrigatório!")]
         public string? Telefone { get; set; }
 
-
+        
     }
 
     
