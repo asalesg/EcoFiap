@@ -18,5 +18,11 @@ namespace EcoFiap.Repository.Context
         {
         }
         public DbSet<EcoFiap.Models.ColetorModel>? ColetorModel { get; set; }
+
+        public DbSet<ColetorModel> Coletor { get; set; }
+
+        public DbSet<EcoFiap.Models.UsuarioModel>? UsuarioModel { get; set; }
+
+
     }
 }
