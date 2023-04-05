@@ -10,6 +10,12 @@ namespace EcoFiap.Models
         {
         }
 
+        public UsuarioModel(int usuarioId, string? nome)
+        {
+            UsuarioId = usuarioId;
+            Nome = nome;
+        }
+
         public UsuarioModel(int usuarioId, string? nome, string? endereco, string? email, string? telefone)
         {
             UsuarioId = usuarioId;
