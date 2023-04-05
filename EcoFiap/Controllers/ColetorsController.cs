@@ -55,7 +55,7 @@ namespace EcoFiap.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Create([Bind("ColetorId,Nome,Endereco,email,Telefone")] ColetorModel coletorModel)
         {
             if (ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace EcoFiap.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Edit(int id, [Bind("ColetorId,Nome,Endereco,email,Telefone")] ColetorModel coletorModel)
         {
             if (id != coletorModel.ColetorId)
@@ -138,7 +138,7 @@ namespace EcoFiap.Controllers
 
         // POST: Coletors/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.ColetorModel == null)

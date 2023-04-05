@@ -6,6 +6,22 @@ namespace EcoFiap.Models
     [Table("USUARIO")]
     public class UsuarioModel
     {
+        public UsuarioModel()
+        {
+        }
+
+        public UsuarioModel(int usuarioId, string? nome)
+        {
+        }
+
+        public UsuarioModel(int usuarioId, string? nome, string? endereco, string? email, string? telefone)
+        {
+            UsuarioId = usuarioId;
+            Nome = nome;
+            Endereco = endereco;
+            this.email = email;
+            Telefone = telefone;
+        }
 
         [Key]
         [Column("USUARIOID")]
