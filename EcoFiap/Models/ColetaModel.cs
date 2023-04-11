@@ -1,22 +1,30 @@
-﻿namespace EcoFiap.Models
+﻿using EcoFiap.Models.Enums;
+
+namespace EcoFiap.Models
 {
     public class ColetaModel
     {
-        public int ColetaId { get; set; }
-        public bool TipoResiduo { get; set; }
-
-        public DateTime DataHoraAgendada { get; set; }
-
-        public string Endereco { get; set; }
-
-        public ColetaModel(string endereco)
+        public ColetaModel()
         {
+        }
+
+        public ColetaModel(int coletaId, TipoResiduo tipo, DateTime dataHoraAgendada, string? endereco)
+        {
+            ColetaId = coletaId;
+            Tipo = tipo;
+            DataHoraAgendada = dataHoraAgendada;
             Endereco = endereco;
         }
 
-        public UsuarioModel? UsuarioId { get; set; }
+        public int ColetaId { get; set; }
+        public TipoResiduo Tipo { get; set; }
 
-        public ColetorModel? ColetorId { get; set; }
+        public DateTime DataHoraAgendada { get; set; }
 
+        public string? Endereco { get; set; }
+
+        public ICollection<UsuarioModel> Usuarios { get; set; } = new List<UsuarioModel>();
+
+        public ICollection<ColetorModel> Coletors { get; set; } = new List<ColetorModel>();
     }
 }

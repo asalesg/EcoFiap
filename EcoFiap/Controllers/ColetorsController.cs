@@ -22,20 +22,20 @@ namespace EcoFiap.Controllers
         // GET: Coletors
         public async Task<IActionResult> Index()
         {
-              return _context.ColetorModel != null ? 
-                          View(await _context.ColetorModel.ToListAsync()) :
+              return _context.Coletor != null ? 
+                          View(await _context.Coletor.ToListAsync()) :
                           Problem("Entity set 'DataBaseContext.ColetorModel'  is null.");
         }
 
         // GET: Coletors/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.ColetorModel == null)
+            if (id == null || _context.Coletor == null)
             {
                 return NotFound();
             }
 
-            var coletorModel = await _context.ColetorModel
+            var coletorModel = await _context.Coletor
                 .FirstOrDefaultAsync(m => m.ColetorId == id);
             if (coletorModel == null)
             {
@@ -70,12 +70,12 @@ namespace EcoFiap.Controllers
         // GET: Coletors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.ColetorModel == null)
+            if (id == null || _context.Coletor == null)
             {
                 return NotFound();
             }
 
-            var coletorModel = await _context.ColetorModel.FindAsync(id);
+            var coletorModel = await _context.Coletor.FindAsync(id);
             if (coletorModel == null)
             {
                 return NotFound();
@@ -121,12 +121,12 @@ namespace EcoFiap.Controllers
         // GET: Coletors/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.ColetorModel == null)
+            if (id == null || _context.Coletor == null)
             {
                 return NotFound();
             }
 
-            var coletorModel = await _context.ColetorModel
+            var coletorModel = await _context.Coletor
                 .FirstOrDefaultAsync(m => m.ColetorId == id);
             if (coletorModel == null)
             {
@@ -141,14 +141,14 @@ namespace EcoFiap.Controllers
 
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.ColetorModel == null)
+            if (_context.Coletor == null)
             {
                 return Problem("Entity set 'DataBaseContext.ColetorModel'  is null.");
             }
-            var coletorModel = await _context.ColetorModel.FindAsync(id);
+            var coletorModel = await _context.Coletor.FindAsync(id);
             if (coletorModel != null)
             {
-                _context.ColetorModel.Remove(coletorModel);
+                _context.Coletor.Remove(coletorModel);
             }
             
             await _context.SaveChangesAsync();
@@ -157,7 +157,7 @@ namespace EcoFiap.Controllers
 
         private bool ColetorModelExists(int id)
         {
-          return (_context.ColetorModel?.Any(e => e.ColetorId == id)).GetValueOrDefault();
+          return (_context.Coletor?.Any(e => e.ColetorId == id)).GetValueOrDefault();
         }
     }
 }
