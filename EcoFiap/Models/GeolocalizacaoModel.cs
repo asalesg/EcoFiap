@@ -1,4 +1,7 @@
-﻿namespace EcoFiap.Models
+﻿using Microsoft.AspNetCore.Authentication;
+using System.ComponentModel.DataAnnotations;
+
+namespace EcoFiap.Models
 {
     public class GeolocalizacaoModel
     {
@@ -13,7 +16,8 @@
             UsuarioId = usuarioId;
             ColetorId = coletorId;
         }
-
+        [Key]
+        public  int LocalizaçãoId { get; set; }
         public string? Latitude { get; set; }
 
         public string? Longitude { get; set; }

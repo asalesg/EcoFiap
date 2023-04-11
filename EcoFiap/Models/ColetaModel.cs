@@ -1,4 +1,5 @@
 ﻿using EcoFiap.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace EcoFiap.Models
 {
@@ -16,6 +17,8 @@ namespace EcoFiap.Models
             Endereco = endereco;
         }
 
+
+        [Key]
         public int ColetaId { get; set; }
         public TipoResiduo Tipo { get; set; }
 
