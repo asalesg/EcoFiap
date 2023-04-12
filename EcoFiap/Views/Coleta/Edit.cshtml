@@ -1,4 +1,5 @@
-﻿@model EcoFiap.Models.ColetaModel
+﻿@using EcoFiap.Models.Enums
+@model EcoFiap.Models.ColetaModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -15,7 +16,13 @@
             <input type="hidden" asp-for="ColetaId" />
             <div class="form-group">
                 <label asp-for="Tipo" class="control-label"></label>
-                <select asp-for="Tipo" class="form-control"></select>
+                <select asp-for="Tipo" class="form-control">
+                    <option value="@TipoResiduo.Eletronicos">Eletrônico</option>
+                    <option value="@TipoResiduo.Inorganico">Inorgânico</option>
+                    <option value="@TipoResiduo.Organico">Orgânico</option>
+                    <option value="@TipoResiduo.Pilhas">Pilhas</option>
+                    <option value="@TipoResiduo.Remedios">Remédios</option>
+                </select>
                 <span asp-validation-for="Tipo" class="text-danger"></span>
             </div>
             <div class="form-group">
